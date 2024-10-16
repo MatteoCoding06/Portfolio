@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ! MENU -->
+    <nav>
+      <div class="nav-content">
+        <div class="logo">
+          <a href="index.html"><span>M</span>atteo<span> L</span>ombardi</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Chi sono</a></li>
+          <li><a href="#projects">Progetti</a></li>
+          <li><a href="#contacts">Contatti</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="grid mt-4" id="about">
+      <div class="col-50">
+        <img
+          src="https://cdna.pcpartpicker.com/static/forever/images/userbuild/367729.cd899c069d4fb5f397a369a15f643223.jpg"
+          alt=""
+          class="img-res"
+        />
+      </div>
+      <div class="col-50 hero">
+        <h2>Chi sono</h2>
+        <p class="balance">
+          Sono un programmatore con passione per la tecnologia e la creatività.
+          Sono specializzato in sviluppo web, con una forte attenzione alla
+          sicurezza e alla scalabilità.
+        </p>
+        <div class="tab-sections">
+          <p class="tab-links active-link" onclick="opentab('skills')">
+            Skills
+          </p>
+          <p class="tab-links" onclick="opentab('education')">Educazione</p>
+          <p class="tab-links" onclick="opentab('certificati')">Certificati</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <div class="timeline">
+            <div class="timeline-box">
+              <div class="timeline-content">
+                <div class="content">
+                  <h4>Sviluppo Web</h4>
+                  <div class="date">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>2020</span>
+                  </div>
+                  <p class="opacity balance">
+                    Sviluppo di siti web dinamici e interattivi utilizzando
+                    tecnologie come HTML, CSS, JavaScript e frameworks come
+                    React e Angular.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="content">
+                  <h4>Hardware pc</h4>
+                  <div class="date">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>2020</span>
+                  </div>
+                  <p class="opacity balance">
+                    Sviluppo di sistemi di computer personalizzati, con
+                    attenzione alla scelta dei componenti e alla configurazione
+                    ottimale.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-contents" id="education">
+          <div class="timeline">
+            <div class="timeline-box">
+              <div class="timeline-content">
+                <div class="content">
+                  <h4>ITIS PIEDIMONTE MATESE</h4>
+                  <div class="date">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>2020 - 2025</span>
+                  </div>
+                  <p class="opacity balance">
+                    Corso di studi in Informatica e Telecomunicazioni.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="content">
+                  <h4>Autodidatta</h4>
+                  <div class="date">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>2026</span>
+                  </div>
+                  <p class="opacity balance">
+                    Sviluppo di competenze informatiche attraverso la lettura di
+                    libri e la partecipazione a corsi online.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-contents" id="certificati">
+          <div class="timeline">
+            <div class="timeline-box">
+              <div class="timeline-content">
+                <div class="content">
+                  <h4>B1</h4>
+                  <div class="date">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>2024</span>
+                  </div>
+                  <p class="opacity balance">Certificato di lingua inglese</p>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="content">
+                  <h4>EIPASS</h4>
+                  <div class="date">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>2024</span>
+                  </div>
+                  <p class="opacity balance">Certificato di informatica</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONTACT SECTION -->
+    <div class="grid mt-4 mb-4" id="contacts">
+      <div class="col-50 contact-info">
+        <h4>Contattami</h4>
+        <p class="opacity balance">
+          Se hai bisogno di aiuto o vuoi semplicemente parlare, non esitare a
+          contattarmi.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/your-profile/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/your-profile/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-50">
+        <div class="contact-form">
+          <form>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="La tua email"
+              />
+            </div>
+            <div class="field">
+              <label for="object">Oggetto</label>
+              <input
+                type="text"
+                id="object"
+                name="object"
+                required
+                placeholder="Oggetto"
+              />
+            </div>
+            <div class="field">
+              <label for="message">Messaggio</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Il tuo messaggio"
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="field">
+              <button type="submit" class="btn btn-primary border-5">
+                Invia
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

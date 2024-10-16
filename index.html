@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ! MENU -->
+    <nav>
+      <div class="nav-content">
+        <div class="logo">
+          <a href="index.html"><span>M</span>atteo<span> L</span>ombardi</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Chi sono</a></li>
+          <li><a href="#projects">Progetti</a></li>
+          <li><a href="#contacts">Contatti</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <div class="grid mt-4" id="home">
+      <div class="col-50 hero">
+        <h1>
+          <span class="gradient-text">Ciao, sono un</span><br />
+          <span id="typed-text"></span>
+        </h1>
+        <p class="opacity">
+          Sono un programmatore con passione per la tecnologia e la creatività
+        </p>
+        <div class="buttons mt-2">
+          <a href="#" class="btn btn-primary">Contattami</a>
+          <a href="#" class="btn btn-secondary">Download CV</a>
+        </div>
+      </div>
+      <div class="col-50 hero">
+        <div class="avatar">
+          <img
+            src="https://avatars.githubusercontent.com/u/15013685?v=4"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div class="grid mt-4" id="about">
+      <div class="col-50">
+        <img
+          src="https://cdna.pcpartpicker.com/static/forever/images/userbuild/367729.cd899c069d4fb5f397a369a15f643223.jpg"
+          alt=""
+          class="img-res"
+        />
+      </div>
+      <div class="col-50 hero">
+        <h2>Chi sono</h2>
+        <p class="balance">
+          Sono un programmatore con passione per la tecnologia e la creatività.
+          Sono specializzato in sviluppo web, con una forte attenzione alla
+          sicurezza e alla scalabilità.
+        </p>
+        <div class="tab-sections">
+          <p class="tab-links active-link" onclick="opentab('skills')">
+            Skills
+          </p>
+          <p class="tab-links" onclick="opentab('education')">Educazione</p>
+          <p class="tab-links" onclick="opentab('certificati')">Certificati</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li>
+              <span>Front-end development</span><br />HTML, CSS, JS E ALTRO
+            </li>
+            <li><span>Mondo tech</span><br />HARDWARE E GADGET TECH</li>
+            <!-- <li><span>Video editing</span><br />DAVINCI RESOLVE</li> -->
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2020-2025</span><br />ISISS PIEDIMONTE MATESE</li>
+            <li><span>2026-???</span><br />AUTODIDATTA</li>
+            <!-- <li><span>2026-???</span><br />AUTODIDATTA</li> -->
+          </ul>
+        </div>
+        <div class="tab-contents" id="certificati">
+          <ul>
+            <li><span>Certificazione informatica</span><br />EIPASS</li>
+            <li><span>Livello di inglese</span><br />B1</li>
+            <!-- <li><span>Video Editing</span><br />VIDEO PER TUTTI</li> -->
+          </ul>
+        </div>
+        <div class="about-section-button">
+          <a href="about.html" class="btn btn-primary">Scopri di più</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES SECTION -->
+    <!-- <div class="services-section mt-4" id="services">
+      <div class="text-center mb-2">
+        <h2>Quali servizi offro?</h2>
+      </div>
+      <div class="grid services-panel pb-3">
+        <div class="col-33">
+          <div class="services-card">
+            <div class="icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p class="opacity">
+              Sviluppo di siti web personalizzati e responsivi per aziende e
+              professionisti
+            </p>
+          </div>
+        </div>
+        <div class="col-33">
+          <div class="services-card">
+            <div class="icon">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p class="opacity">
+              Creazione di esperienze utente intuitive e coinvolgenti per siti
+              web
+            </p>
+          </div>
+        </div>
+        <div class="col-33">
+          <div class="services-card">
+            <div class="icon">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3>Deploy online</h3>
+            <p class="opacity">
+              Hosting e deploy di siti web online ad abbonamento
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- PROJECTS SECTION -->
+    <div class="projects-section mt-4" id="projects">
+      <div class="text-center mb-2">
+        <h2>Progetti</h2>
+      </div>
+      <div class="grid">
+        <div class="col-33">
+          <div class="project-card">
+            <div class="img-container">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:1400/1*tmKhpioRWNfyn4VMj0DEOw.jpeg"
+                alt="Progetto 1"
+                class="img-card"
+              />
+              <div class="overlay">
+                <a href="link_progetto.html" class="icon-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+                <a href="link_codice.html" class="icon-btn">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <h4>Dashboard Wiritaly</h4>
+              <p class="opacity">
+                Dashboard per la gestione e monitoraggio degli utenti di
+                Wiritaly
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-33">
+          <div class="project-card">
+            <div class="img-container">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:1400/1*tmKhpioRWNfyn4VMj0DEOw.jpeg"
+                alt="Progetto 1"
+                class="img-card"
+              />
+              <div class="overlay">
+                <a href="link_progetto.html" class="icon-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+                <a href="link_codice.html" class="icon-btn">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <h4>Il mio portfolio</h4>
+              <p class="opacity">
+                Il mio portfolio, dove potrai trovare tutti i miei progetti e
+                esperienze
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-33">
+          <div class="project-card">
+            <div class="img-container">
+              <img
+                src="https://miro.medium.com/v2/resize:fit:1400/1*tmKhpioRWNfyn4VMj0DEOw.jpeg"
+                alt="Progetto 1"
+                class="img-card"
+              />
+              <div class="overlay">
+                <a href="link_progetto.html" class="icon-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+                <a href="link_codice.html" class="icon-btn">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-card-content">
+              <h4>Pc autofficina</h4>
+              <p class="opacity">
+                Assemblaggio di un pc per un'autofficina, usato dal segretario
+                per il lavoro
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="grid mt-4 mb-4" id="contacts">
+      <div class="col-50 contact-info">
+        <h4>Contattami</h4>
+        <p class="opacity balance">
+          Se hai bisogno di aiuto o vuoi semplicemente parlare, non esitare a
+          contattarmi.
+        </p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/your-profile/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/your-profile/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-50">
+        <div class="contact-form">
+          <form>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="La tua email"
+              />
+            </div>
+            <div class="field">
+              <label for="object">Oggetto</label>
+              <input
+                type="text"
+                id="object"
+                name="object"
+                required
+                placeholder="Oggetto"
+              />
+            </div>
+            <div class="field">
+              <label for="message">Messaggio</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Il tuo messaggio"
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="field">
+              <button type="submit" class="btn btn-primary border-5">
+                Invia
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#typed-text", {
+        strings: ["Web Developer", "Freelancer", "Tech Geek"],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
