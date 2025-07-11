@@ -57,7 +57,6 @@ html {
   padding: 0;
   background: var(--background-primary);
   color: var(--text-primary);
-
   margin: 0 auto;
   scroll-behavior: smooth;
 }
@@ -411,7 +410,7 @@ nav .nav-content .logo a span {
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  padding: 0;
+  padding: 0 15px;
 }
 span.gradient-text {
   background-image: linear-gradient(
@@ -430,6 +429,12 @@ span.gradient-text {
 span#typed-text {
   color: var(--text-primary);
 }
+@media (max-width: 768px) {
+  span.gradient-text {
+    font-size: 0.8em;
+  }
+}
+
 .btn {
   padding: 10px 20px;
   font-size: 16px;
@@ -544,8 +549,8 @@ span#typed-text {
   align-items: start;
 }
 .avatar {
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   position: relative;
 }
 .avatar img {
@@ -646,6 +651,9 @@ span#typed-text {
   border: 1px solid var(--text-primary);
   border-radius: 5px;
   background: var(--background-primary);
+}
+.field button {
+  border-radius: 15px;
 }
 .border-5 {
   border-radius: 5px;
@@ -762,9 +770,24 @@ span#typed-text {
 
 footer {
   width: 100%;
-
   padding: 20px;
   text-align: center;
   color: var(--text-primary);
-  margin-top: 20px;
+}
+
+footer .footer-content p a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer .footer-content p a:hover {
+  color: var(--color-primary-light);
+}
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper-contact-info {
+  flex: 1;
 }
